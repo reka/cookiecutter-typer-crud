@@ -1,0 +1,16 @@
+{
+    "project_title": "Dummy Experiment",
+    "project_name": "{{cookiecutter.project_title.lower().replace(' ','-')}}",
+    "package_name": "{{cookiecutter.project_name.replace('-','_')}}",
+    "project_camel_case": "{{cookiecutter.project_title.replace(' ','')}}",
+    "db_env_var": "{{cookiecutter.package_name.upper() + '_DB_PATH'}}",
+    "author_name": "Your Name",
+    "author_email": "name@example.com",
+    "model_name": "thing",
+    "model_class_name": "{{cookiecutter.model_name.capitalize()}}",
+    "unique_field": "short_name",
+    "unique_field_test_value": "some-unique-name",
+    "further_fields": {},
+    "git_initial_commit": "y",
+    "commit_message": "{% if cookiecutter.git_initial_commit == 'y' %}project skeleton generated with cookiecutter-typer-crud{% else %} {% endif %}"
+}
